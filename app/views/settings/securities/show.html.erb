@@ -27,7 +27,7 @@
               title: t(".disable_mfa_confirm"),
               body: t(".disable_mfa_confirm"),
               accept: t(".disable_mfa"),
-              acceptClass: "w-full bg-red-500 text-white rounded-xl text-center p-[10px] border mb-2"
+              acceptClass: "w-full btn btn--destructive text-white rounded-xl text-center p-[10px] mb-2"
             } } %>
       <% else %>
         <%= link_to t(".enable_mfa"), new_mfa_path,

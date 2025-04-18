@@ -4,10 +4,10 @@
   id="transaction-filters-menu"
   data-menu-target="content"
   data-controller="tabs"
-  data-tabs-active-class="bg-gray-25 text-primary"
+  data-tabs-active-class="bg-surface text-primary"
   data-tabs-default-tab-value="<%= get_default_transaction_search_filter[:key] %>"
   class="hidden absolute flex z-10 h-80 w-[540px] top-12 right-0 shadow-border-xs bg-container rounded-lg">
-  <div class="flex w-44 flex-col items-start p-3 text-sm font-medium text-secondary border-r border-r-alpha-black-100">
+  <div class="flex w-44 flex-col items-start p-3 text-sm font-medium text-secondary border-r border-secondary">
     <% transaction_search_filters.each do |filter| %>
       <button
         class="flex text-secondary hover:bg-container-inset items-center gap-2 px-3 rounded-md py-2 w-full"
@@ -22,7 +22,7 @@
   </div>
 
   <div class="flex flex-col grow">
-    <div class="grow p-3 border-b border-b-alpha-black-100 overflow-y-auto">
+    <div class="grow p-3 border-b border-secondary overflow-y-auto">
       <% transaction_search_filters.each do |filter| %>
         <div id="<%= filter[:key] %>" data-tabs-target="tab">
           <%= render partial: get_transaction_search_filter_partial_path(filter), locals: { form: form } %>
